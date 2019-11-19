@@ -23,7 +23,7 @@ directories.map((item) => {
         if (file === 'Arquivos') return
         iCount++
         const extnameFile = path.extname(file)
-        const nameFile = item + "_" + moment().format('DDMMYYYY') + "_0" + iCount + extnameFile
+        const nameFile = item + "_" + moment().format('DDMMYYYY') + "_" + iCount + extnameFile
         fs.rename(`${__dirname}/folders/${item}/${file}`, `${__dirname}/folders/${item}/${nameFile}`, (err) => {
           if (err) return console.log(err)
         })
